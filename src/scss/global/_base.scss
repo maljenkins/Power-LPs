@@ -1,0 +1,43 @@
+/* -------------------------------------------------------------------------- */
+/*                                Base HTML Elements                          */
+/* -------------------------------------------------------------------------- */
+
+body {
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+p {
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
+ul {
+  font-size: inherit;
+}
+
+ol {
+  font-size: inherit;
+}
+
+li {
+  font-size: inherit;
+}
+
+hr {
+  display: inherit;
+}

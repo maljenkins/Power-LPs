@@ -1,0 +1,42 @@
+/* -------------------------------------------------------------------------- */
+/*    Convert Fonts to REM with IE Fallback - Ex: @include font-size(14px);   */
+/* -------------------------------------------------------------------------- */
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Input Placeholders                             */
+/* -------------------------------------------------------------------------- */
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*           Transitions - Ex: @include transition(color .3s ease);           */
+/* -------------------------------------------------------------------------- */
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

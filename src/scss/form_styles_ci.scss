@@ -1,0 +1,58 @@
+// Variables
+$arrowLink: url(https://go.pardot.com/l/839113/2020-01-28/2272i/839113/4555/Down_Arrow.svg);
+
+// Base Form Styles
+
+@mixin baseInputStyles {
+  width: 100%;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  @include font-size(14px);
+  font-weight: 400;
+  padding: 8px 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+}
+
+// select styles
+@mixin selectStyles {
+  background-image: $arrowLink;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-user-select: none;
+  background-position: calc(100% - 12px);
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  width: 100%;
+}
+
+// label styles
+@mixin labelStyles {
+  font-family: $label-font;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600 !important;
+  text-align: left;
+}
+
+// submit styles
+@mixin submitStyles {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 12px 22px;
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+// position submit btn
+@mixin submitPosition {
+  text-align: left;
+}

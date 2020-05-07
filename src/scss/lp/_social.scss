@@ -1,0 +1,30 @@
+// Social Share
+
+#social-share {
+  width: 100%;
+  margin: inherit auto;
+  text-align: center;
+}
+
+#social-share a {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.75;
+  transition: opacity 0.15s linear;
+  background-color: transparent;
+}
+
+#social-share a:hover {
+  opacity: 1;
+}
+
+#social-share i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
