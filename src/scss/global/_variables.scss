@@ -6,8 +6,18 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
 
 $font-stack: (
-  open-sans: "'Open Sans',Arial,Helvetica,sans-serif",
-  lato: "'Lato',Arial,Helvetica,sans-serif",
+  open-sans: (
+    "Open Sans",
+    Arial,
+    Helvetica,
+    sans-serif,
+  ),
+  lato: (
+    "Lato",
+    Arial,
+    Helvetica,
+    sans-serif,
+  ),
 );
 
 $font-weight: (
@@ -26,8 +36,10 @@ $font-weight: (
 /* -------------------------------------------------------------------------- */
 
 $color: (
+  transparent: transparent,
   body: #212529,
   white: #ffffff,
+  grey: #f4f8ff,
   orange: #ff7300,
   blue: #082b4b,
   dark-blue: #051c31,

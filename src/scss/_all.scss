@@ -1,0 +1,1132 @@
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  font-family: $secondary-font;
+  .navbar-brand {
+    color: $nav-default-color;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+    letter-spacing: 0.0625rem;
+    li.nav-item {
+      a.nav-link {
+        color: $nav-default-color;
+        &:hover {
+          color: $primary-color;
+        }
+        &:active {
+          color: $nav-default-color;
+        }
+        &:focus {
+          color: $nav-default-color;
+        }
+      }
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+  .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+  }
+}
+
+// Desktop Nav Styles
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: font-size 0.3s;
+      -moz-transition: font-size 0.3s;
+      transition: font-size 0.3s;
+    }
+    .navbar-nav {
+      margin-top: 0;
+    }
+    .navbar-nav > li.nav-item > a.nav-link.active,
+    .navbar-nav > li.nav-item > a.nav-link.focus,
+    .navbar-nav > li.nav-item > a.nav-link.hover {
+      color: #fff;
+      background: $primary-color;
+    }
+    .navbar-shrink {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      .navbar-brand {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+// Default (Mobile) Hero Styles
+
+header.masthead {
+  padding-top: calc(3rem + 72px);
+  padding-bottom: 3rem;
+}
+header.masthead h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+header.masthead h2 {
+  font-size: 1.3rem;
+  font-family: $secondary-font;
+}
+
+header {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+// Desktop Hero Styles
+
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: calc(6rem + 106px);
+    padding-bottom: 6rem;
+  }
+  header.masthead h1 {
+    font-size: 4.75em;
+    line-height: 4rem;
+  }
+  header.masthead h2 {
+    font-size: 1.75em;
+  }
+}
+
+// Desktop Prefooter Section
+
+@media (min-width: 768px) {
+  section.prefooter {
+    padding: 20px 0;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+// Footer Styles
+
+footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: $secondary-color;
+  color: #fff;
+}
+.copyright {
+  background-color: $secondary-darker-color;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 2rem 0;
+}
+
+// Social Share
+
+#social-share {
+  width: 100%;
+  margin: inherit auto;
+  text-align: center;
+}
+
+#social-share a {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.75;
+  transition: opacity 0.15s linear;
+  background-color: transparent;
+}
+
+#social-share a:hover {
+  opacity: 1;
+}
+
+#social-share i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Form Styles
+
+// variables
+$arrowLink: url(https://go.pardot.com/l/839113/2020-01-28/2272i/839113/4555/Down_Arrow.svg);
+
+// input styles
+@mixin inputStyles {
+  font-family: $primary-font;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  text-indent: 10px;
+}
+
+// select styles
+@mixin selectStyles {
+  background-image: $arrowLink;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-user-select: none;
+  background-position: calc(100% - 12px);
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  width: 100%;
+}
+
+// label styles
+@mixin labelStyles {
+  font-family: $label-font;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600 !important;
+  text-align: left;
+}
+
+// submit styles
+@mixin submitStyles {
+  font-family: $primary-font;
+  background: $primary-color !important;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 12px 22px;
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+// position submit btn
+@mixin submitPosition {
+  text-align: left;
+}
+
+#pardot-form {
+  background-color: transparent;
+  font-family: $primary-font;
+  input.text,
+  textarea,
+  select,
+  input.date {
+    @include inputStyles;
+  }
+  select {
+    @include selectStyles;
+  }
+
+  p:not([class]) {
+    font-weight: 400;
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 1em 0;
+  }
+
+  p.form-field {
+    float: left;
+    padding: 0 5px 10px;
+    width: 100%;
+    margin: 0;
+    clear: none;
+
+    label {
+      @include labelStyles;
+      &.inline {
+        margin: 5px 0;
+        padding: 0;
+        width: 100%;
+        float: left;
+        font-weight: 600;
+      }
+    }
+
+    textarea {
+      height: 120px !important;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      padding: 1em;
+    }
+
+    span > span input[type="radio"] {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
+  // radio
+  p.pd-radio {
+    margin-bottom: 1em;
+
+    label:first-of-type {
+      margin-bottom: 1em;
+      width: 100%;
+    }
+
+    span > span > label,
+    span > span > input {
+      float: left;
+    }
+
+    span > span > input {
+      width: 20px !important;
+      border: 1px solid red;
+    }
+
+    span > span > label {
+      margin: -3px 0 0 0 !important;
+      padding: 0;
+      width: 100% !important;
+      vertical-align: text-top;
+    }
+    span.value {
+      margin-left: 20px;
+    }
+  }
+
+  // checkbox
+  p.pd-checkbox {
+    // checkbox label
+    input[type="checkbox"] {
+      border: 1px solid red;
+      margin: 10px 0;
+      float: left;
+    }
+
+    label {
+      margin: -2px 6px 0;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+    span.value {
+      margin-left: 20px;
+    }
+  }
+
+  p.submit {
+    width: 100%;
+    @include submitPosition;
+    margin: 1em auto;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    clear: both !important;
+    float: left;
+    &:hover {
+      input:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+    input {
+      @include submitStyles;
+    }
+  }
+}
+
+//  ___  ______________  __________
+// / _ \/ ___/ ___/ __ \/ ___/ ___/
+///  __/ /  / /  / /_/ / /  (__  )
+//\___/_/  /_/   \____/_/  /____/
+
+p.errors,
+p.error {
+  color: #dc070b;
+}
+
+p.errors {
+  margin-bottom: 1em;
+  color: #ff0909 !important;
+  background-color: transparent !important;
+  background-color: transparent;
+
+  &.no-label {
+    display: none;
+  }
+}
+
+p.form-field.required label,
+span.required label {
+  background: none !important;
+}
+
+p.form-field.required label.field-label:after {
+  content: " *";
+  color: red;
+}
+
+p.error input,
+p.error select,
+p.error textarea {
+  border: 1px solid #ff0808 !important;
+}
+
+//required
+.require label:after {
+  content: " *";
+  color: red !important;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+}
+.form-field .description {
+  font-weight: 600;
+  left: -8px;
+  position: relative;
+}
+
+// check boxes and radio
+
+/* hide the regular radio button */
+.pd-radio input {
+  opacity: 0;
+  position: absolute;
+}
+
+/* position the label */
+.pd-radio input,
+.pd-radio label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.pd-radio label {
+  position: relative;
+}
+.pd-radio label.inline {
+  position: relative;
+  left: 25px !important;
+  position: relative;
+}
+
+/* style the unchecked radio button */
+.pd-radio input + label:before {
+  content: "";
+  background: #fff;
+  border: 1px solid #000;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  margin-right: 10px;
+  text-align: center;
+  position: absolute;
+  margin-left: -24px;
+  margin-top: 4px;
+}
+
+.pd-radio input + label:before {
+  border-radius: 50%;
+}
+
+/* style the selected radio button */
+.pd-radio input:checked + label:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f111";
+  color: $primary-color;
+}
+
+.pd-radio input:focus + label {
+  outline: 1px solid #ddd;
+  /* focus style */
+}
+
+// checkbox
+/* hide the regular checkbox */
+.pd-checkbox input {
+  opacity: 0;
+  position: absolute;
+}
+
+/* position the label */
+.pd-checkbox input,
+.pd-checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.pd-checkbox label {
+  position: relative;
+}
+.pd-checkbox label.inline {
+  position: relative;
+  left: 25px !important;
+  position: relative;
+}
+
+/* style the unchecked checkbox */
+.pd-checkbox input + label:before {
+  content: "";
+  background: #fff;
+  border: 1px solid #000;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 18px;
+  position: absolute;
+  margin-left: -24px;
+  margin-top: 2px;
+}
+
+/* style the checked checkbox */
+.pd-checkbox input:checked + label:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  background: $primary-color;
+  color: #fff;
+  border-color: $primary-color;
+}
+.pd-checkbox input {
+  position: absolute;
+}
+
+// Font Variables
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i");
+
+$primary-font: "Open Sans", Helvetica, Arial, sans-serif;
+$secondary-font: "Lato", Helvetica, Arial, sans-serif;
+$label-font: "Open Sans", Helvetica, Arial, sans-serif;
+
+// Color Variables
+
+$body-color: #212529;
+$primary-color: #ff7300;
+$secondary-color: #082b4b;
+$secondary-darker-color: #051c31;
+$nav-default-color: #ffffff;
+
+// Color Classes
+.bg-primary {
+  background-color: $primary-color !important;
+}
+.bg-secondary {
+  background-color: $secondary-color !important;
+}
+.bg-secondary-darker {
+  background-color: $secondary-darker-color !important;
+}
+.text-primary {
+  color: $primary-color !important;
+}
+.text-secondary {
+  color: $secondary-color !important;
+}
+.btn-primary {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+}
+.btn-secondary {
+  background-color: $secondary-color !important;
+  border-color: $secondary-color !important;
+}
+
+// Default Stylings
+
+body {
+  font-family: $primary-font;
+  color: $body-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: $secondary-font;
+}
+section {
+  padding: 2rem 0;
+}
+
+// Desktop Section Styles
+
+@media (min-width: 992px) {
+  section {
+    padding: 6rem 0;
+  }
+}
+
+// Default (Mobile) Navigation Styles
+
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  font-family: $secondary-font;
+  .navbar-brand {
+    color: $nav-default-color;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+    letter-spacing: 0.0625rem;
+    li.nav-item {
+      a.nav-link {
+        color: $nav-default-color;
+        &:hover {
+          color: $primary-color;
+        }
+        &:active {
+          color: $nav-default-color;
+        }
+        &:focus {
+          color: $nav-default-color;
+        }
+      }
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+  .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+  }
+}
+
+// Desktop Nav Styles
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: font-size 0.3s;
+      -moz-transition: font-size 0.3s;
+      transition: font-size 0.3s;
+    }
+    .navbar-nav {
+      margin-top: 0;
+    }
+    .navbar-nav > li.nav-item > a.nav-link.active,
+    .navbar-nav > li.nav-item > a.nav-link.focus,
+    .navbar-nav > li.nav-item > a.nav-link.hover {
+      color: #fff;
+      background: $primary-color;
+    }
+    .navbar-shrink {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      .navbar-brand {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+// Default (Mobile) Hero Styles
+
+header.masthead {
+  padding-top: calc(3rem + 72px);
+  padding-bottom: 3rem;
+}
+header.masthead h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+header.masthead h2 {
+  font-size: 1.3rem;
+  font-family: $secondary-font;
+}
+
+header {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+// Desktop Hero Styles
+
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: calc(6rem + 106px);
+    padding-bottom: 6rem;
+  }
+  header.masthead h1 {
+    font-size: 4.75em;
+    line-height: 4rem;
+  }
+  header.masthead h2 {
+    font-size: 1.75em;
+  }
+}
+
+// Desktop Prefooter Section
+
+@media (min-width: 768px) {
+  section.prefooter {
+    padding: 20px 0;
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+// Footer Styles
+
+footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: $secondary-color;
+  color: #fff;
+}
+.copyright {
+  background-color: $secondary-darker-color;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 2rem 0;
+}
+
+// Social Share
+
+#social-share {
+  width: 100%;
+  margin: inherit auto;
+  text-align: center;
+}
+
+#social-share a {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.75;
+  transition: opacity 0.15s linear;
+  background-color: transparent;
+}
+
+#social-share a:hover {
+  opacity: 1;
+}
+
+#social-share i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Form Styles
+
+// variables
+$arrowLink: url(https://go.pardot.com/l/839113/2020-01-28/2272i/839113/4555/Down_Arrow.svg);
+
+// input styles
+@mixin inputStyles {
+  font-family: $primary-font;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  text-indent: 10px;
+}
+
+// select styles
+@mixin selectStyles {
+  background-image: $arrowLink;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-user-select: none;
+  background-position: calc(100% - 12px);
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  width: 100%;
+}
+
+// label styles
+@mixin labelStyles {
+  font-family: $label-font;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600 !important;
+  text-align: left;
+}
+
+// submit styles
+@mixin submitStyles {
+  font-family: $primary-font;
+  background: $primary-color !important;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 12px 22px;
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+// position submit btn
+@mixin submitPosition {
+  text-align: left;
+}
+
+#pardot-form {
+  background-color: transparent;
+  font-family: $primary-font;
+  input.text,
+  textarea,
+  select,
+  input.date {
+    @include inputStyles;
+  }
+  select {
+    @include selectStyles;
+  }
+
+  p:not([class]) {
+    font-weight: 400;
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 1em 0;
+  }
+
+  p.form-field {
+    float: left;
+    padding: 0 5px 10px;
+    width: 100%;
+    margin: 0;
+    clear: none;
+
+    label {
+      @include labelStyles;
+      &.inline {
+        margin: 5px 0;
+        padding: 0;
+        width: 100%;
+        float: left;
+        font-weight: 600;
+      }
+    }
+
+    textarea {
+      height: 120px !important;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      padding: 1em;
+    }
+
+    span > span input[type="radio"] {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
+  // radio
+  p.pd-radio {
+    margin-bottom: 1em;
+
+    label:first-of-type {
+      margin-bottom: 1em;
+      width: 100%;
+    }
+
+    span > span > label,
+    span > span > input {
+      float: left;
+    }
+
+    span > span > input {
+      width: 20px !important;
+      border: 1px solid red;
+    }
+
+    span > span > label {
+      margin: -3px 0 0 0 !important;
+      padding: 0;
+      width: 100% !important;
+      vertical-align: text-top;
+    }
+    span.value {
+      margin-left: 20px;
+    }
+  }
+
+  // checkbox
+  p.pd-checkbox {
+    // checkbox label
+    input[type="checkbox"] {
+      border: 1px solid red;
+      margin: 10px 0;
+      float: left;
+    }
+
+    label {
+      margin: -2px 6px 0;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+    span.value {
+      margin-left: 20px;
+    }
+  }
+
+  p.submit {
+    width: 100%;
+    @include submitPosition;
+    margin: 1em auto;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    clear: both !important;
+    float: left;
+    &:hover {
+      input:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+    input {
+      @include submitStyles;
+    }
+  }
+}
+
+//  ___  ______________  __________
+// / _ \/ ___/ ___/ __ \/ ___/ ___/
+///  __/ /  / /  / /_/ / /  (__  )
+//\___/_/  /_/   \____/_/  /____/
+
+p.errors,
+p.error {
+  color: #dc070b;
+}
+
+p.errors {
+  margin-bottom: 1em;
+  color: #ff0909 !important;
+  background-color: transparent !important;
+  background-color: transparent;
+
+  &.no-label {
+    display: none;
+  }
+}
+
+p.form-field.required label,
+span.required label {
+  background: none !important;
+}
+
+p.form-field.required label.field-label:after {
+  content: " *";
+  color: red;
+}
+
+p.error input,
+p.error select,
+p.error textarea {
+  border: 1px solid #ff0808 !important;
+}
+
+//required
+.require label:after {
+  content: " *";
+  color: red !important;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+}
+.form-field .description {
+  font-weight: 600;
+  left: -8px;
+  position: relative;
+}
+
+// check boxes and radio
+
+/* hide the regular radio button */
+.pd-radio input {
+  opacity: 0;
+  position: absolute;
+}
+
+/* position the label */
+.pd-radio input,
+.pd-radio label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.pd-radio label {
+  position: relative;
+}
+.pd-radio label.inline {
+  position: relative;
+  left: 25px !important;
+  position: relative;
+}
+
+/* style the unchecked radio button */
+.pd-radio input + label:before {
+  content: "";
+  background: #fff;
+  border: 1px solid #000;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  margin-right: 10px;
+  text-align: center;
+  position: absolute;
+  margin-left: -24px;
+  margin-top: 4px;
+}
+
+.pd-radio input + label:before {
+  border-radius: 50%;
+}
+
+/* style the selected radio button */
+.pd-radio input:checked + label:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f111";
+  color: $primary-color;
+}
+
+.pd-radio input:focus + label {
+  outline: 1px solid #ddd;
+  /* focus style */
+}
+
+// checkbox
+/* hide the regular checkbox */
+.pd-checkbox input {
+  opacity: 0;
+  position: absolute;
+}
+
+/* position the label */
+.pd-checkbox input,
+.pd-checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.pd-checkbox label {
+  position: relative;
+}
+.pd-checkbox label.inline {
+  position: relative;
+  left: 25px !important;
+  position: relative;
+}
+
+/* style the unchecked checkbox */
+.pd-checkbox input + label:before {
+  content: "";
+  background: #fff;
+  border: 1px solid #000;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 18px;
+  position: absolute;
+  margin-left: -24px;
+  margin-top: 2px;
+}
+
+/* style the checked checkbox */
+.pd-checkbox input:checked + label:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  background: $primary-color;
+  color: #fff;
+  border-color: $primary-color;
+}
+.pd-checkbox input {
+  position: absolute;
+}

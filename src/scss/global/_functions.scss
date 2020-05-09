@@ -2,6 +2,12 @@
 /*                               Font Functions                               */
 /* -------------------------------------------------------------------------- */
 
+// Accessor Function of map-get $font-stack
+
+@function font-stack($key) {
+  @return map-get($font-stack, $key);
+}
+
 // Generate Font Stack Classes (ex: class="open-sans")
 
 @each $key, $value in $font-stack {
@@ -21,7 +27,7 @@
 // Calculate REM Size (used in @mixin font-size)
 
 html {
-  font-size: 62.5%; /* Required for Function + Mixin */
+  font-size: 16px; /* Required for Function + Mixin */
 }
 
 @function calculateRem($size) {
@@ -32,6 +38,12 @@ html {
 /* -------------------------------------------------------------------------- */
 /*                               Color Functions                              */
 /* -------------------------------------------------------------------------- */
+
+// Accessor Function of map-get $color
+
+@function color($key) {
+  @return map-get($color, $key);
+}
 
 // Generate Text, Background, and Border Color Classes for Each Color (ex: class="bg-orange")
 

@@ -7,6 +7,11 @@
   font-size: calculateRem($size);
 }
 
+@mixin line-height($height) {
+  line-height: $height; //fallback for old browsers
+  line-height: calculateRem($height);
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             Input Placeholders                             */
 /* -------------------------------------------------------------------------- */

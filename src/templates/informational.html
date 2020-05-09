@@ -1,6 +1,16 @@
 {% extends "layout/_layout.html" %}
 
 
+{% block custom_css %}
+
+/* Custom Styles */
+
+{% endblock %}
+
+{% block header %}
+{% include "sections/_header.html"%}
+{% endblock %}
+
 {% block content %}
 
 {% include "sections/_content-left-form-right.html" %}
@@ -10,4 +20,8 @@
 
 
 
+{% endblock %}
+
+{% block footer %}
+{% include "sections/_footer.html"%}
 {% endblock %}

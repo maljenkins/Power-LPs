@@ -1,0 +1,379 @@
+/* -------------------------------------------------------------------------- */
+/*                                Hero Styles                                 */
+/* -------------------------------------------------------------------------- */
+
+#hero {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: color(white);
+  text-align: center;
+  h1 {
+    @include font-size(48px);
+    @include line-height(54px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(72px);
+      @include line-height(84px);
+    }
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  h2 {
+    @include font-size(24px);
+    @include line-height(30px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(36px);
+      @include line-height(42px);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Hero w/ Form Styles                         */
+/* -------------------------------------------------------------------------- */
+
+header.form-header {
+  #form-outer {
+    background-color: color(white);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      margin-top: 0;
+    }
+  }
+  #hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: color(white);
+    text-align: left;
+    @include font-size(14px);
+    @include line-height(18px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(16px);
+      @include line-height(22px);
+    }
+    h1 {
+      text-align: center;
+      @include font-size(36px);
+      @include line-height(42px);
+      margin-bottom: 1rem;
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) {
+        text-align: left;
+        @include font-size(64px);
+        @include line-height(72px);
+      }
+      text-transform: uppercase;
+      padding-bottom: 0;
+    }
+    h3 {
+      text-align: center;
+      @include font-size(24px);
+      @include line-height(30px);
+      margin-bottom: 1rem;
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) {
+        text-align: left;
+        @include font-size(36px);
+        @include line-height(42px);
+      }
+    }
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                            Two-Column Form Right                           */
+/* -------------------------------------------------------------------------- */
+
+section#content-left-form-right {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                      Two-Column Image Left / Content Right                 */
+/* -------------------------------------------------------------------------- */
+
+section#image-left-content-right {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Video Section                               */
+/* -------------------------------------------------------------------------- */
+
+section#video {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  background-color: color(blue);
+  color: color(white);
+  text-align: center;
+  @include font-size(24px);
+  @include line-height(30px);
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    @include font-size(36px);
+    @include line-height(42px);
+  }
+  p {
+    @include font-size(18px);
+    @include line-height(24px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(22px);
+      @include line-height(30px);
+    }
+    margin-top: calculateRem(20px);
+    margin-bottom: calculateRem(30px);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 FAQ Section                                */
+/* -------------------------------------------------------------------------- */
+
+section#faq {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              3-Column Services                             */
+/* -------------------------------------------------------------------------- */
+
+section#three-col-services {
+  background-color: color(grey);
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  text-align: center;
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  h3 {
+    @include font-size(24px);
+    @include line-height(30px);
+    margin-bottom: 2rem;
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(36px);
+      @include line-height(42px);
+    }
+  }
+  h4 {
+    @include font-size(24px);
+    @include line-height(30px);
+    margin: 1.25rem 0 0.75rem 0;
+  }
+  p {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Testimonial                                */
+/* -------------------------------------------------------------------------- */
+
+section#testimonial {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  background-color: color(blue);
+  color: color(white);
+  text-align: center;
+  h2 {
+    @include font-size(24px);
+    @include line-height(30px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(36px);
+      @include line-height(42px);
+    }
+  }
+
+  p {
+    @include font-size(18px);
+    @include line-height(24px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(22px);
+      @include line-height(30px);
+    }
+    margin-top: calculateRem(20px);
+    margin-bottom: calculateRem(30px);
+
+    &.quote {
+      margin-top: 1rem;
+      font-style: italic;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Whitepaper                                 */
+/* -------------------------------------------------------------------------- */
+
+section#whitepaper {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  text-align: center;
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: left;
+  }
+  background-color: color(orange);
+  color: color(white);
+  h2 {
+    text-align: center;
+    padding-bottom: 2.5rem;
+    @include font-size(24px);
+    @include line-height(30px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(36px);
+      @include line-height(42px);
+    }
+  }
+
+  p {
+    @include font-size(16px);
+    @include line-height(18px);
+    padding: 0 1rem;
+    @media (min-width: 576px) {
+      text-align: left;
+      padding: 0;
+      @include font-size(18px);
+      @include line-height(24px);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Headline - CTA                                 */
+/* -------------------------------------------------------------------------- */
+
+section#headline-cta {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  background-color: color(grey);
+  color: color(body);
+  text-align: center;
+  @include font-size(20px);
+  @include line-height(28px);
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    @include font-size(28px);
+    @include line-height(36px);
+  }
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    @include font-size(24px);
+    @include line-height(30px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      @include font-size(36px);
+      @include line-height(42px);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Pre-Footer Section                             */
+/* -------------------------------------------------------------------------- */
+
+section#pre-footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: color(orange);
+  color: color(white);
+  text-align: center;
+  @include font-size(20px);
+  @include line-height(28px);
+  a {
+    color: color(white) !important;
+  }
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    @include font-size(28px);
+    @include line-height(36px);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Footer                                   */
+/* -------------------------------------------------------------------------- */
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: color(blue);
+  color: color(white);
+  text-align: center;
+  h4 {
+    @include font-size(24px);
+    @include line-height(32px);
+    text-transform: uppercase;
+    margin-top: calculateRem(20px);
+    margin-bottom: calculateRem(10px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(28px);
+      @include line-height(36px);
+      margin-bottom: calculateRem(20px);
+    }
+  }
+  p {
+    @include font-size(16px);
+    @include line-height(22px);
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      @include font-size(18px);
+      @include line-height(24px);
+    }
+  }
+  a {
+    color: color(white);
+  }
+}
+#copyright {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background-color: color(dark-blue);
+  color: transparentize(color(white), 0.2);
+  @include font-size(14px);
+  @include line-height(18px);
+}

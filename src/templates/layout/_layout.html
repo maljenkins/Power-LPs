@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="%%description%%" />
     <title>%%title%%</title>
-    <link
-      rel="shortcut icon"
-      href=""
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="{{general.favicon}}" type="image/x-icon" />
 
     <!-- Bootstrap -->
     <link
@@ -28,25 +24,34 @@
     />
 
     <!-- Base LP Styles - CI -->
-    <link
-      rel="stylesheet"
-      href="css/lp_base_styles_ci.css"
-    />
+    <link rel="stylesheet" href="css/lp_base_styles_ci.css" />
     <!-- Form Styles - CI -->
-    <link
-      rel="stylesheet"
-      href="css/form_styles_ci.css"
-    />
+    <link rel="stylesheet" href="css/form_styles_ci.css" />
+
+    <style>
+      header {
+        background-image: url("{{ header.image}}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-color: #222222;
+      }
+    </style>
+    <style>
+    {% block custom_css %} {% endblock %}
+    </style>
   </head>
   <body>
-    {% include "../includes/_nav.html" %}
-    {% include "../includes/_header.html"%} 
+
+  {% block header %} {% endblock %}
     
-        
-    {% block content %} {% endblock %}
 
+    <main>
+      {% block content %} {% endblock %}
+    </main>
+    
 
-    {% include "../includes/_footer.html"%}
+    {% block footer %} {% endblock %}
 
     <!-- jQuery, Popper, Bootstrap -->
     <script
@@ -64,5 +69,15 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    {% if scripts.inline_form_fields %}
+    {% include "../includes/_inline-form-fields.html" %}
+    {% endif %}
+    {% if scripts.bootstrap_form_fields %}
+    {% include "../includes/_bootstrap-form-fields.html" %}
+    {% endif %}
+    {%if nav.fixed %}
+    {% include "../includes/_fixed-nav-offset.html" %}
+    {% endif%}
   </body>
 </html>

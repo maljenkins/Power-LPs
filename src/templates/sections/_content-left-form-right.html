@@ -30,7 +30,13 @@
         </ul>
       </div>
       <div id="form-outer" class="col-md-4 offset-md-1">
-        %%content%%
+
+      {% if controls.demo_form %}
+      {% include "../includes/_demo-form.html" %}
+      {% else %}
+      %%content%%
+      {% endif %}
+
       </div>
     </div>
   </div>
