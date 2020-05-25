@@ -45,5 +45,31 @@
   "scripts": {
     "inline_form_fields": false,
     "bootstrap_form_fields": true
-  }
+  },
+  "pages": [
+    {
+      "filename": "custom_1.html"
+    },
+    {
+      "filename": "custom_2.html"
+    },
+    {
+      "filename": "download.html"
+    },
+    {
+      "filename": "form_focused.html"
+    },
+    {
+      "filename": "form_only.html"
+    },
+    {
+      "filename": "informational.html"
+    },
+    {
+      "filename": "services.html"
+    },
+    {
+      "filename": "standard.html"
+    }
+  ]
 }
