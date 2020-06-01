@@ -3,6 +3,9 @@
     "demo_form": true
   },
   "general": {
+    "pardot_tracking_domain": "https//go.pardot.com",
+    "lp_base_styles": "https://",
+    "form_styles": "https://",
     "business_name": "Cheshire Impact",
     "street_address": "1 Tara Blvd Suite 200",
     "city_state_zip": "Nashua, NH 03062",

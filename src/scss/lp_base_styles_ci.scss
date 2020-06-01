@@ -1,12 +1,8 @@
 // Global Styles
-
-@import "global/_variables";
-@import "global/_functions";
-@import "global/_mixins";
-@import "global/_base";
+@import "inc/variables";
+@import "inc/functions";
+@import "inc/base";
 
 // Landing Page Components
 
-@import "lp/sections";
-@import "lp/nav";
-@import "lp/social";
+@import "inc/sections";

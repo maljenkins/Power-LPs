@@ -4,7 +4,7 @@
 
 body {
   font-size: 16px;
-  font-family: font-stack("open-sans");
+  font-family: $primary-font;
   color: color(body);
 }
 
@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: font-stack("lato");
+  font-family: $headline-font;
   font-weight: 300;
 }
 
@@ -23,39 +23,23 @@ p {
 }
 
 a {
-  color: color(blue);
+  color: $secondary-color;
   @include transition(all 0.3s ease);
   &:hover {
-    color: color(orange);
+    color: $primary-color;
   }
-}
-
-ul {
-  font-size: inherit;
-}
-
-ol {
-  font-size: inherit;
-}
-
-li {
-  font-size: inherit;
-}
-
-hr {
-  display: inherit;
 }
 
 .btn-primary {
   @include font-size(18px);
   color: color(white);
-  background-color: color(orange);
-  border-color: color(orange);
+  background-color: $primary-color;
+  border-color: $primary-color;
   padding: 0.75rem 1.5rem;
   @include transition(all 0.3s ease);
   &:hover {
-    background-color: color(blue);
-    border-color: color(blue);
+    background-color: $secondary-color;
+    border-color: $secondary-color;
   }
   /* Small devices (landscape phones, 576px and up) */
   @media (min-width: 576px) {
@@ -66,10 +50,10 @@ hr {
 
 .btn-secondary {
   @extend .btn-primary;
-  background-color: color(blue);
+  background-color: $secondary-color;
   &:hover {
-    background-color: color(orange);
-    border-color: color(orange);
+    background-color: $primary-color;
+    border-color: $primary-color;
   }
 }
 

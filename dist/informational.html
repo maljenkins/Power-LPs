@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="%%description%%" />
     <title>%%title%%</title>
     <link rel="shortcut icon" href="https://www.cheshireimpact.com/wp-content/uploads/2018/07/new-favicon.png" type="image/x-icon" />
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="%%title%%" />
+    <meta property="og:description" content="%%description%%" />
+    <meta name="twitter:title" content="%%title%%" />
+    <meta name="twitter:description" content="%%description%%" />
 
     <!-- Bootstrap -->
     <link
@@ -22,11 +29,13 @@
       integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
       crossorigin="anonymous"
     />
-
+    
     <!-- Base LP Styles - CI -->
     <link rel="stylesheet" href="css/lp_base_styles_ci.css" />
     <!-- Form Styles - CI -->
     <link rel="stylesheet" href="css/form_styles_ci.css" />
+    
+   
 
     <style>
       header {
@@ -38,7 +47,7 @@
       }
     </style>
     <style>
-    
+      
 
 /* Custom Styles */
 
@@ -46,8 +55,7 @@
     </style>
   </head>
   <body>
-
-  
+    
 <!-- Editable Hero Background Image -->
 <code pardot-region="Change Header Background image" pardot-region-type="HTML">
   <!-- Instructions for Updating Background Images Here: https://www.loom.com/share/7bc3a807f3e9446393c3b49bab0fa527 -->
@@ -74,6 +82,7 @@
           class="img-fluid"
           src="https://maljenkins.github.io/cheshPublic/images/cheshlogodark.png"
           width="150"
+          style="width:150px"
       /></a>
     </div>
     
@@ -112,10 +121,13 @@
   <div class="container">
     <div id="hero" class="row">
       <div class="col-12">
-        <h1 pardot-region="Hero - Headline">
+        <h1
+          pardot-region="Hero - Headline"
+          class="display-3 text-uppercase mb-0 pb-0"
+        >
           Lorem Ipsum Dolor
         </h1>
-        <h2 pardot-region="Hero - Subhead">
+        <h2 pardot-region="Hero - Subhead" class="display-5">
           Aenean nisl arcu, malesuada quis ullamcorper vitae, volutpat sit amet
           neque
         </h2>
@@ -125,7 +137,6 @@
 </header>
 
 
-    
 
     <main>
       
@@ -135,7 +146,7 @@
   <div class="container">
     <div class="row">
       <div pardot-region="Left Column - Content" class="col-md-7">
-        <h1>MAIN Headline Dolor Sit Amet</h1>
+        <h1>Main Headline Dolor Sit Amet</h1>
         <p class="lead">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
           vestibulum lacus vel malesuada elementum. Donec egestas porttitor
@@ -143,28 +154,25 @@
         </p>
         <h3>Smaller Headline Dolor Sit Amet</h3>
         <p>
-          In arcu neque, feugiat a congue et, congue rutrum nibh. Cras ac
-          orci non quam maximus dignissim. Nulla facilisi. Sed turpis
-          ligula, pulvinar sit amet malesuada quis, rhoncus id ante. Donec
-          imperdiet enim bibendum quam maximus dignissim. Praesent nec massa
-          sem. Nulla vitae lectus ac libero dapibus dictum.
+          In arcu neque, feugiat a congue et, congue rutrum nibh. Cras ac orci
+          non quam maximus dignissim. Nulla facilisi. Sed turpis ligula,
+          pulvinar sit amet malesuada quis, rhoncus id ante. Donec imperdiet
+          enim bibendum quam maximus dignissim. Praesent nec massa sem. Nulla
+          vitae lectus ac libero dapibus dictum.
         </p>
         <ul>
           <li>
             Donec sit amet mauris est. In hac habitasse platea dictumst.
           </li>
           <li>
-            Quisque auctor quam gravida neque placerat, a semper nibh
-            elementum. Nam sodales augue gravida, tincidunt erat id,
-            lobortis tellus.
+            Quisque auctor quam gravida neque placerat, a semper nibh elementum.
+            Nam sodales augue gravida, tincidunt erat id, lobortis tellus.
           </li>
           <li>Sed suscipit neque sed eros elementum volutpat</li>
         </ul>
       </div>
       <div id="form-outer" class="col-md-4 offset-md-1">
-
-      
-      
+         
 <!DOCTYPE html>
 <html>
 	<head>
@@ -351,37 +359,46 @@ form.form p label { color: #000000; }
 	</body>
 </html>
 
-      
-
+        
       </div>
     </div>
   </div>
 </section>
+
 <!--   Video Section   -->
 <section id="video">
   <div class="container">
     <div class="row">
       <div class="col-10 col-lg-6 mx-auto">
-        <h2 pardot-region="Video - Headline">
+        <h2 pardot-region="Video - Headline" class="display-5">
           VIDEO
         </h2>
-        <p pardot-region="Video - Content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum lacus vel malesuada elementum.
+        <p pardot-region="Video - Content" class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+          vestibulum lacus vel malesuada elementum.
         </p>
-        <div pardot-region="Video - Embed" class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rblYSKz_VnI" frameborder="0"
-            allowfullscreen></iframe>
+        <div
+          pardot-region="Video - Embed"
+          class="embed-responsive embed-responsive-16by9"
+        >
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/rblYSKz_VnI"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- FAQ Section  -->
 <section id="faq">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 pardot-region="FAQ - Headline" class="h1">
+        <h2 pardot-region="FAQ - Headline" class="h1 mb-3">
           FAQs
         </h2>
       </div>
@@ -390,39 +407,44 @@ form.form p label { color: #000000; }
       <div class="col-md-4" pardot-region="FAQ - Column 1">
         <h4>Question example here?</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
-          amet leo ac lectus bibendum efficitur. Duis venenatis enim a nibh
-          molestie, ac lobortis tellus malesuada. Donec vestibulum felis ac
-          ornare suscipit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet
+          leo ac lectus bibendum efficitur. Duis venenatis enim a nibh molestie,
+          ac lobortis tellus malesuada. Donec vestibulum felis ac ornare
+          suscipit.
         </p>
       </div>
       <div class="col-md-4" pardot-region="FAQ - Column 2">
         <h4>Lorem ipsum dolor sit amet?</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
-          amet leo ac lectus bibendum efficitur. Duis venenatis enim a nibh
-          molestie, ac lobortis tellus malesuada. Donec vestibulum felis ac
-          ornare suscipit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet
+          leo ac lectus bibendum efficitur. Duis venenatis enim a nibh molestie,
+          ac lobortis tellus malesuada. Donec vestibulum felis ac ornare
+          suscipit.
         </p>
       </div>
       <div class="col-md-4" pardot-region="FAQ - Column 3">
         <h4>Cras pharetra quam a justo?</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
-          amet leo ac lectus bibendum efficitur. Duis venenatis enim a nibh
-          molestie, ac lobortis tellus malesuada. Donec vestibulum felis ac
-          ornare suscipit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet
+          leo ac lectus bibendum efficitur. Duis venenatis enim a nibh molestie,
+          ac lobortis tellus malesuada. Donec vestibulum felis ac ornare
+          suscipit.
         </p>
       </div>
     </div>
   </div>
 </section>
+
 <!-- Pre-Footer -->
 <section id="pre-footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-12" pardot-region="Prefooter - Content">
-        Questions? Call <a href="tel:844-GO-IMPACT" target="_blank">844-GO-IMPACT</a> or
+      <div class="col-md-12 h3" pardot-region="Prefooter - Content">
+        Questions? Call
+        <a href="tel:844-GO-IMPACT" target="_blank"
+          >844-GO-IMPACT</a
+        >
+        or
         <a href="https://www.cheshireimpact.com/contact/" target="_blank">Contact Us</a>
       </div>
     </div>
@@ -432,8 +454,8 @@ form.form p label { color: #000000; }
 
 
 
+
     </main>
-    
 
     
 <!-- Footer -->
@@ -442,7 +464,7 @@ form.form p label { color: #000000; }
     <div class="row">
       <div class="col-md-4">
         <h4 pardot-region="Footer 1 - Headline">
-          CONTACT US
+          Contact Us
         </h4>
         <div pardot-region="Footer 1 - Content">
           <p>
@@ -511,7 +533,7 @@ form.form p label { color: #000000; }
 </footer>
 <section id="copyright">
   <div class="row">
-    <div pardot-region="Copyright" class="col-md-12 text-center">
+    <div pardot-region="Copyright" class="col-md-12 text-center small">
       Copyright &copy; Cheshire Impact
       <script language="javascript" type="text/javascript">
         var today = new Date();
@@ -542,7 +564,7 @@ form.form p label { color: #000000; }
     ></script>
 
     
-    
+     
     <!-- Add Bootstrap Classes to Form Fields -->
 <script type="text/javascript">
   $(document).ready(function () {
@@ -554,7 +576,7 @@ form.form p label { color: #000000; }
     });
   });
 </script>
-
+ 
     
     
     <!-- Dynamic Offset for Fixed Nav -->
