@@ -38,13 +38,43 @@
   "header": {
     "image": "https://maljenkins.github.io/cheshPublic/images/header_backdrop.jpg"
   },
-  "social": {
-    "facebook": "#",
-    "twitter": "#",
-    "youtube": "#",
-    "linkedin": "#",
-    "instagram": "#"
-  },
+  "social": [
+    {
+      "name": "facebook",
+      "link": "#",
+      "icon": "<i class=\"fab fa-facebook-f\"></i>"
+    },
+    {
+      "name": "twitter",
+      "link": "#",
+      "icon": "<i class=\"fab fa-twitter\"></i>"
+    },
+    {
+      "name": "instagram",
+      "link": "#",
+      "icon": "<i class=\"fab fa-instagram\"></i>"
+    },
+    {
+      "name": "youtube",
+      "link": "#",
+      "icon": "<i class=\"fab fa-youtube\"></i>"
+    },
+    {
+      "name": "pinterest",
+      "link": "#",
+      "icon": "<i class=\"fab fa-pinterest\"></i>"
+    },
+    {
+      "name": "linkedin",
+      "link": "#",
+      "icon": "<i class=\"fab fa-linkedin\"></i>"
+    },
+    {
+      "name": "blog",
+      "link": "#",
+      "icon": "<i class=\"fas fa-globe-americas\"></i>"
+    }
+  ],
   "scripts": {
     "inline_form_fields": false,
     "bootstrap_form_fields": true

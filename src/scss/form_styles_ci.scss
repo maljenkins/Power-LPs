@@ -73,14 +73,14 @@ $required-asterisk: $error-color;
 // Base Form Styles
 @mixin formStyles {
   background-color: $form-bg;
-  font-family: $primary-font;
+  font-family: $form-font;
   @include font-size($form-size);
   font-weight: $form-weight;
   // Sets Link Color for Above/Below + Not You Link
   a {
-    color: $primary-color;
+    color: $primary;
     &:hover {
-      color: $secondary-color;
+      color: $secondary;
     }
   }
 }
@@ -138,8 +138,8 @@ $required-asterisk: $error-color;
   }
   &:focus {
     outline: none;
-    border-color: $primary-color;
-    box-shadow: 0 0 5px 2px $primary-color;
+    border-color: $primary;
+    box-shadow: 0 0 5px 2px $primary;
   }
 }
 
@@ -204,6 +204,21 @@ $required-asterisk: $error-color;
   font-size: $description-size;
 }
 
+// Styles for Google reCaptcha
+@mixin recaptchaStyles {
+  p.submit {
+    input {
+      // The reCaptcha Box is 72px tall. This offsets the submit button so it doesn't overlap
+          //margin-top: 80px;
+    }
+  }
+  .g-recaptcha > div {
+    // Float the reCaptcha to the Right with an 8px offset to match input spacing
+      // margin-left: auto;
+      // margin-right: 8px;
+  }
+}
+
 #pardot-form {
   @include formStyles;
   p {
@@ -251,6 +266,8 @@ $required-asterisk: $error-color;
       }
     }
   }
+  /* Google ReCaptcha Styles */
+     @include recaptchaStyles();
 }
 
 // Error Styles
