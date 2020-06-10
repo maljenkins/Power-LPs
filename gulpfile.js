@@ -33,3 +33,9 @@ function style() {
   );
 }
 exports.style = style;
+
+
+
+gulp.task("watch", function () {
+  gulp.watch('src/**/*.html', gulp.series(['default']));
+});
