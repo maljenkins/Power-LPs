@@ -35,7 +35,6 @@ function style() {
 exports.style = style;
 
 
-
 gulp.task("watch", function () {
-  gulp.watch('src/**/*.html', gulp.series(['default']));
+  gulp.watch('src/**/*', gulp.series(['default']));
 });
