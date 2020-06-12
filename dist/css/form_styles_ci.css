@@ -130,89 +130,13 @@ html {
   /* Required for Function + Mixin */
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                Base HTML Elements                          */
-/* -------------------------------------------------------------------------- */
-body {
-  font-size: 16px;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  color: #212529;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-}
-
-p {
-  font-size: inherit;
-}
-
-a {
-  color: #082b4b;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #ff7300;
-}
-
-.btn-primary, .btn-secondary, .btn-light {
-  font-size: 18px;
-  font-size: 1.125rem;
-  color: #ffffff;
-  background-color: #ff7300;
-  border-color: #ff7300;
-  padding: 0.75rem 1.5rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  /* Small devices (landscape phones, 576px and up) */
-}
-
-.btn-primary:hover, .btn-secondary:hover, .btn-light:hover {
-  background-color: #082b4b;
-  border-color: #082b4b;
-}
-
-@media (min-width: 576px) {
-  .btn-primary, .btn-secondary, .btn-light {
-    font-size: 22px;
-    font-size: 1.375rem;
-    padding: 1rem 2rem;
-  }
-}
-
-.btn-secondary {
-  background-color: #082b4b;
-}
-
-.btn-secondary:hover {
-  background-color: #ff7300;
-  border-color: #ff7300;
-}
-
-.btn-light {
-  background-color: transparent;
-  border-color: #ffffff;
-}
-
-.btn-light:hover {
-  background-color: #ffffff;
-  border-color: #ffffff;
-}
-
 #pardot-form {
   background-color: transparent;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
+  /* Google ReCaptcha Styles */
 }
 
 #pardot-form a {
@@ -243,6 +167,7 @@ a:hover {
   text-align: left;
   color: #212529;
   margin: 0px 0px 4px 0px;
+  width: auto;
 }
 
 #pardot-form p.form-field.pd-text input {
@@ -352,6 +277,12 @@ a:hover {
           box-shadow: 0 0 5px 2px #ff7300;
 }
 
+@-moz-document url-prefix() {
+  #pardot-form p.form-field.pd-select select {
+    padding-left: calc($input-padding-left - 6px);
+  }
+}
+
 #pardot-form p.form-field.pd-select select option {
   background-color: inherit;
   color: inherit;
@@ -417,6 +348,7 @@ a:hover {
   text-align: left;
   color: #212529;
   margin: 0px 0px 4px 0px;
+  width: auto;
   font-weight: 300;
   margin: 5px 0px 0px 0px;
   font-style: italic;
