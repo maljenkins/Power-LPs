@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-    {% if controls.demo_form == false%}
+    {% if controls.demo_form == false %}
     <base href="{{general.pardot_tracking_domain}}" >
     {% endif %}
     <meta charset="UTF-8" />
@@ -31,7 +31,7 @@
       integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
       crossorigin="anonymous"
     />
-    {% if controls.demo_form%}
+    {% if controls.demo_form %}
     <!-- Base LP Styles - CI -->
     <link rel="stylesheet" href="css/lp_base_styles_ci.css" />
     <!-- Form Styles - CI -->
@@ -89,8 +89,9 @@
     {% if scripts.bootstrap_form_fields %} 
     {% include "../includes/_bootstrap-form-fields.html" %} 
     {% endif %}
-    {%if nav.fixed %}
+    {% if nav.fixed %}
     {% include "../includes/_fixed-nav-offset.html" %}
-    {% endif%}
+    {% endif %}
+    {% include "../includes/_recaptcha_script.html" %} 
   </body>
 </html>
