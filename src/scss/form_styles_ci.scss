@@ -288,7 +288,7 @@ $required-asterisk: $error-color;
   color: $error-color;
   background-color: transparent;
   &.no-label {
-    display: none;
+   margin-left: 20px;
   }
 }
 
