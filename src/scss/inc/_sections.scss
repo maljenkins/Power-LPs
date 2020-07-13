@@ -1,197 +1,10 @@
 // Defaults
-
-@mixin sectionStyles {
+section, header, footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-
-/* -------------------------------------------------------------------------- */
-/*                                Hero Styles                                 */
-/* -------------------------------------------------------------------------- */
-
-#hero {
-  @include sectionStyles();
-  color: color(white);
-  text-align: center;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                Hero w/ Form Styles                         */
-/* -------------------------------------------------------------------------- */
-
-header.form-header {
-  #form-outer {
-    background-color: color(white);
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    margin-top: 2rem;
-    /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {
-      margin-top: 0;
-    }
-  }
-  #hero {
-    @include sectionStyles();
-    color: color(white);
-    text-align: left;
-  }
-}
-/* -------------------------------------------------------------------------- */
-/*                            Two-Column Form Right                           */
-/* -------------------------------------------------------------------------- */
-
-section#content-left-form-right {
-  @include sectionStyles();
-}
-
-/* -------------------------------------------------------------------------- */
-/*                      Two-Column Image Left / Content Right                 */
-/* -------------------------------------------------------------------------- */
-
-section#image-left-content-right {
-  @include sectionStyles();
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                Video Section                               */
-/* -------------------------------------------------------------------------- */
-
-section#video {
-  @include sectionStyles();
-  background-color: $secondary-color;
-  color: color(white);
-  text-align: center;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                 FAQ Section                                */
-/* -------------------------------------------------------------------------- */
-
-section#faq {
-  @include sectionStyles();
-}
-
-/* -------------------------------------------------------------------------- */
-/*                              3-Column Services                             */
-/* -------------------------------------------------------------------------- */
-
-section#three-col-services {
-  @include sectionStyles();
-  background-color: color(grey);
-  text-align: center;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                 Testimonial                                */
-/* -------------------------------------------------------------------------- */
-
-section#testimonial {
-  @include sectionStyles();
-  background-color: $secondary-color;
-  color: color(white);
-  text-align: center;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                 Whitepaper                                 */
-/* -------------------------------------------------------------------------- */
-
-section#whitepaper {
-  @include sectionStyles();
-  background-color: $primary-color;
-  color: color(white);
-}
-
-/* -------------------------------------------------------------------------- */
-/*                             Headline - CTA                                 */
-/* -------------------------------------------------------------------------- */
-
-section#headline-cta {
-  @include sectionStyles();
-  background-color: color(grey);
-  color: color(body);
-}
-
-/* -------------------------------------------------------------------------- */
-/*                             Pre-Footer Section                             */
-/* -------------------------------------------------------------------------- */
-
-section#pre-footer {
-  @include sectionStyles();
-  background-color: $primary-color;
-  color: color(white);
-  text-align: center;
-  a {
-    color: color(white) !important;
-  }
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                   Footer                                   */
-/* -------------------------------------------------------------------------- */
-
-footer {
-  @include sectionStyles();
-  background-color: $secondary-color;
-  color: color(white);
-  text-align: center;
-  a {
-    color: color(white);
-    &:hover {
-      color: $primary-color;
-      text-decoration: none;
-    }
-  }
-}
-#copyright {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  background-color: $third-color;
-  color: transparentize(color(white), 0.2);
-}
-
-// Social Share
-
-#social-share {
-  margin: inherit auto;
-  text-align: center;
-  padding-bottom: 1rem;
-}
-
-#social-share a {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  margin: 4px;
-  border-radius: 50%;
-  font-size: 18px;
-  color: #fff;
-  opacity: 0.75;
-  transition: opacity 0.15s linear;
-  background-color: transparent;
-  /* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) {
-    margin: 6px;
-    width: 24px;
-    height: 24px;
-    font-size: 24px;
-  }
-}
-
-#social-share a:hover {
-  opacity: 1;
-}
-
-#social-share i {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* -------------------------------------------------------------------------- */
-/*                             Base Navbar Styles                             */
-/* -------------------------------------------------------------------------- */
-
+  
+// Base Navbar Styles
 nav.navbar {
   background-color: $secondary-color;
   color: color(body);
@@ -214,10 +27,7 @@ nav.navbar {
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                      Default (Expanded) Navbar Styles                      */
-/* -------------------------------------------------------------------------- */
-
+// Desktop/Default Nav
 .navbar-collapse {
   ul.navbar-nav {
     li.nav-item {
@@ -228,13 +38,7 @@ nav.navbar {
         font-weight: 600;
         letter-spacing: 1px;
         @include transition(color 0.3s ease);
-        &:hover {
-          color: $primary-color;
-        }
-        &:active {
-          color: $primary-color;
-        }
-        &:focus {
+        &:hover, &:active, &:focus {
           color: $primary-color;
         }
       }
@@ -242,10 +46,7 @@ nav.navbar {
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                            Mobile Navbar Styles                            */
-/* -------------------------------------------------------------------------- */
-
+// Mobile Nav Styles
 .navbar-collapse.show,
 .navbar-collapse.collapsing {
   background-color: color(white);
@@ -254,16 +55,143 @@ nav.navbar {
     li.nav-item {
       a.nav-link {
         color: $secondary-color;
-        &:hover {
-          color: $primary-color;
-        }
-        &:active {
-          color: $primary-color;
-        }
-        &:focus {
+        &:hover, &:active, &:focus {
           color: $primary-color;
         }
       }
     }
   }
 }
+
+
+// Header/Hero Styles
+header {
+  #hero {
+    color: color(white);
+    text-align: center;
+  }
+  // Form In Header
+  &.form-header {
+    #hero {
+      text-align: left;
+    }
+    #form-outer {
+      background-color: color(white);
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      margin-top: 2rem;
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// Two-Column, Form Right
+// section#content-left-form-right {
+// }
+
+// Two-Column Image Left / Content Right    
+// section#image-left-content-right {
+// }
+
+// Video Section  
+section#video {
+  background-color: $secondary-color;
+  color: color(white);
+  text-align: center;
+}
+
+// FAQ Section
+// section#faq {
+// ]}
+
+// 3-Column Services 
+section#three-col-services {
+  background-color: color(grey);
+  text-align: center;
+}
+
+// Testimonial 
+section#testimonial {
+  background-color: $secondary-color;
+  color: color(white);
+  text-align: center;
+}
+
+// Whitepaper
+section#whitepaper {
+  background-color: $primary-color;
+  color: color(white);
+}
+
+// Headline - CTA
+section#headline-cta {
+  background-color: color(grey);
+  color: color(body);
+}
+
+//  Pre-Footer Section
+section#pre-footer {
+  background-color: $primary-color;
+  color: color(white);
+  text-align: center;
+  a {
+    color: color(white) !important;
+  }
+}
+
+// Footer
+footer {
+  background-color: $secondary-color;
+  color: color(white);
+  text-align: center;
+  a {
+    color: color(white);
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Copright
+#copyright {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background-color: $third-color;
+  color: transparentize(color(white), 0.2);
+}
+
+// Social Share
+#social-share {
+  margin: inherit auto;
+  text-align: center;
+  padding-bottom: 1rem;
+  a {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.75;
+    transition: opacity 0.15s linear;
+    background-color: transparent;
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      margin: 6px;
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
+

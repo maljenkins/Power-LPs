@@ -129,9 +129,11 @@ html {
   /* Required for Function + Mixin */
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                Base HTML Elements                          */
-/* -------------------------------------------------------------------------- */
+* {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 body {
   font-size: 16px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -206,19 +208,77 @@ a:hover {
   border-color: #ffffff;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                Hero Styles                                 */
-/* -------------------------------------------------------------------------- */
-#hero {
+section, header, footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+nav.navbar {
+  background-color: #082b4b;
+  color: #212529;
+  padding: 1.875rem;
+}
+
+nav.navbar .navbar-brand {
+  color: #ffffff;
+}
+
+nav.navbar .navbar-toggler {
+  background-color: #ff7300;
+  width: 50px;
+  text-align: center;
+}
+
+nav.navbar .navbar-toggler .navbar-toggler-icon {
+  color: #ffffff;
+  line-height: 30px;
+  width: 100%;
+}
+
+.navbar-collapse ul.navbar-nav li.nav-item {
+  margin: 0 1rem;
+}
+
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:hover, .navbar-collapse ul.navbar-nav li.nav-item a.nav-link:active, .navbar-collapse ul.navbar-nav li.nav-item a.nav-link:focus {
+  color: #ff7300;
+}
+
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
+  background-color: #ffffff;
+  padding: 1.875rem;
+}
+
+.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link,
+.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link {
+  color: #082b4b;
+}
+
+.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:hover, .navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:active, .navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:focus,
+.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:hover,
+.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:active,
+.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:focus {
+  color: #ff7300;
+}
+
+header #hero {
   color: #ffffff;
   text-align: center;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                Hero w/ Form Styles                         */
-/* -------------------------------------------------------------------------- */
+header.form-header #hero {
+  text-align: left;
+}
+
 header.form-header #form-outer {
   background-color: #ffffff;
   padding: 1rem 2rem;
@@ -233,95 +293,34 @@ header.form-header #form-outer {
   }
 }
 
-header.form-header #hero {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #ffffff;
-  text-align: left;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                            Two-Column Form Right                           */
-/* -------------------------------------------------------------------------- */
-section#content-left-form-right {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                      Two-Column Image Left / Content Right                 */
-/* -------------------------------------------------------------------------- */
-section#image-left-content-right {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                Video Section                               */
-/* -------------------------------------------------------------------------- */
 section#video {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   background-color: #082b4b;
   color: #ffffff;
   text-align: center;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                 FAQ Section                                */
-/* -------------------------------------------------------------------------- */
-section#faq {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                              3-Column Services                             */
-/* -------------------------------------------------------------------------- */
 section#three-col-services {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   background-color: #f4f8ff;
   text-align: center;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                 Testimonial                                */
-/* -------------------------------------------------------------------------- */
 section#testimonial {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   background-color: #082b4b;
   color: #ffffff;
   text-align: center;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                 Whitepaper                                 */
-/* -------------------------------------------------------------------------- */
 section#whitepaper {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   background-color: #ff7300;
   color: #ffffff;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                             Headline - CTA                                 */
-/* -------------------------------------------------------------------------- */
 section#headline-cta {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   background-color: #f4f8ff;
   color: #212529;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                             Pre-Footer Section                             */
-/* -------------------------------------------------------------------------- */
 section#pre-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   background-color: #ff7300;
   color: #ffffff;
   text-align: center;
@@ -331,12 +330,7 @@ section#pre-footer a {
   color: #ffffff !important;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                   Footer                                   */
-/* -------------------------------------------------------------------------- */
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   background-color: #082b4b;
   color: #ffffff;
   text-align: center;
@@ -390,94 +384,5 @@ footer a:hover {
 
 #social-share a:hover {
   opacity: 1;
-}
-
-#social-share i {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-/* -------------------------------------------------------------------------- */
-/*                             Base Navbar Styles                             */
-/* -------------------------------------------------------------------------- */
-nav.navbar {
-  background-color: #082b4b;
-  color: #212529;
-  padding: 1.875rem;
-}
-
-nav.navbar .navbar-brand {
-  color: #ffffff;
-}
-
-nav.navbar .navbar-toggler {
-  background-color: #ff7300;
-  width: 50px;
-  text-align: center;
-}
-
-nav.navbar .navbar-toggler .navbar-toggler-icon {
-  color: #ffffff;
-  line-height: 30px;
-  width: 100%;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                      Default (Expanded) Navbar Styles                      */
-/* -------------------------------------------------------------------------- */
-.navbar-collapse ul.navbar-nav li.nav-item {
-  margin: 0 1rem;
-}
-
-.navbar-collapse ul.navbar-nav li.nav-item a.nav-link {
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:hover {
-  color: #ff7300;
-}
-
-.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:active {
-  color: #ff7300;
-}
-
-.navbar-collapse ul.navbar-nav li.nav-item a.nav-link:focus {
-  color: #ff7300;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                            Mobile Navbar Styles                            */
-/* -------------------------------------------------------------------------- */
-.navbar-collapse.show,
-.navbar-collapse.collapsing {
-  background-color: #ffffff;
-  padding: 1.875rem;
-}
-
-.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link,
-.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link {
-  color: #082b4b;
-}
-
-.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:hover,
-.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:hover {
-  color: #ff7300;
-}
-
-.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:active,
-.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:active {
-  color: #ff7300;
-}
-
-.navbar-collapse.show ul.navbar-nav li.nav-item a.nav-link:focus,
-.navbar-collapse.collapsing ul.navbar-nav li.nav-item a.nav-link:focus {
-  color: #ff7300;
 }
 /*# sourceMappingURL=lp_base_styles_ci.css.map */

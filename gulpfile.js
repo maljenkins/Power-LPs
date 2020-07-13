@@ -2,10 +2,12 @@ const gulp = require("gulp");
 const nunjucksRender = require("gulp-nunjucks-render");
 const sass = require("gulp-sass");
 const data = require("gulp-data");
+const prettier = require("gulp-prettier");
 
-gulp.task("default", function () {
+
+function nunjucks() {
   return gulp
-    .src("src/templates/*.html")
+    .src("./src/templates/*.njk")
     .pipe(
       data(function () {
         return require("./src/data/global.json");
@@ -13,28 +15,20 @@ gulp.task("default", function () {
     )
     .pipe(
       nunjucksRender({
-        path: ["src/templates/"], // String or Array
+        path: ["./src/templates/"],
       })
     )
-    .pipe(gulp.dest("dist"));
-});
-
-// Compile scss
-
-function style() {
-  // Locate scss file
-  return (
-    gulp
-      .src("src/scss/**/*.scss")
-      // Pass through scss compiler
-      .pipe(sass())
-      // Destination for compiled css
-      .pipe(gulp.dest("dist/css/"))
-  );
+    .pipe(gulp.dest("./dist/"));
 }
-exports.style = style;
+
+function pretty() {
+  return gulp
+    .src("./dist/*.html")
+    .pipe(prettier({ singleQuote: true }))
+    .pipe(gulp.dest("./dist/"));
+}
 
 
-gulp.task("watch", function () {
-  gulp.watch('src/**/*', gulp.series(['default']));
-});
+const build = gulp.series(nunjucks, pretty);
+
+exports.default = build;
