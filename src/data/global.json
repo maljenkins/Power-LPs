@@ -1,6 +1,6 @@
 {
   "controls": {
-    "demo_form": false
+    "demo_form": true
   },
   "general": {
     "pardot_tracking_domain": "https//go.pardot.com",
