@@ -17,7 +17,7 @@ const paths = {
     src: 'src/templates/**/*'
   },
   data: {
-    src: 'src/data/*'
+    src: 'src/data/*.json'
   }
 };
 
@@ -60,12 +60,12 @@ function style(done) {
   done();
 }
 
-function pretty(done) {
-  gulp.src("./dist/*.html")
-    .pipe(prettier({ singleQuote: true }))
-    .pipe(gulp.dest("./dist/"));
-  done();
-}
+// function pretty(done) {
+//   gulp.src("./dist/*.html")
+//     .pipe(prettier({ singleQuote: true }))
+//     .pipe(gulp.dest("./dist/"));
+//   done();
+// }
 
 
 const watch = () => gulp.watch([paths.styles.src, paths.html.src, paths.data.src], gulp.series(nunjucks, style, reload));
