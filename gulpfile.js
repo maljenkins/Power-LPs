@@ -1,13 +1,43 @@
 const gulp = require("gulp");
 const nunjucksRender = require("gulp-nunjucks-render");
 const sass = require("gulp-sass");
+const prefix = require('gulp-autoprefixer');
 const data = require("gulp-data");
 const prettier = require("gulp-prettier");
+const browserSync = require("browser-sync");
+const server = browserSync.create();
 
 
-function nunjucks() {
-  return gulp
-    .src("./src/templates/*.njk")
+const paths = {
+  styles: {
+    src: 'src/scss/**/*.scss',
+    dest: 'dist/css/'
+  },
+  html: {
+    src: 'src/templates/**/*'
+  },
+  data: {
+    src: 'src/data/*'
+  }
+};
+
+
+function reload(done) {
+  server.reload();
+  done();
+}
+
+function serve(done) {
+  server.init({
+    server: {
+      baseDir: './dist/'
+    }
+  });
+  done();
+}
+
+function nunjucks(done) {
+  gulp.src("./src/templates/*")
     .pipe(
       data(function () {
         return require("./src/data/global.json");
@@ -19,16 +49,26 @@ function nunjucks() {
       })
     )
     .pipe(gulp.dest("./dist/"));
+  done();
 }
 
-function pretty() {
-  return gulp
-    .src("./dist/*.html")
+function style(done) {
+  gulp.src(paths.styles.src)
+    .pipe(sass())
+    .pipe(prefix())
+    .pipe(gulp.dest(paths.styles.dest));
+  done();
+}
+
+function pretty(done) {
+  gulp.src("./dist/*.html")
     .pipe(prettier({ singleQuote: true }))
     .pipe(gulp.dest("./dist/"));
+  done();
 }
 
 
-const build = gulp.series(nunjucks, pretty);
+const watch = () => gulp.watch([paths.styles.src, paths.html.src, paths.data.src], gulp.series(nunjucks, style, reload));
 
-exports.default = build;
+const dev = gulp.series(nunjucks, style, serve, watch);
+exports.default = dev;
