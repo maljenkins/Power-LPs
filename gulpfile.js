@@ -36,13 +36,13 @@ function serve(done) {
   done();
 }
 
+function getData(file) {
+  return require(file);
+}
+
 function nunjucks(done) {
   gulp.src("./src/templates/*")
-    .pipe(
-      data(function () {
-        return require("./src/data/global.json");
-      })
-    )
+    .pipe(data(getData('./src/data/global.json')))
     .pipe(
       nunjucksRender({
         path: ["./src/templates/"],
