@@ -4,6 +4,7 @@ const sass = require("gulp-sass");
 const prefix = require('gulp-autoprefixer');
 const data = require("gulp-data");
 const prettier = require("gulp-prettier");
+const plumber = require("gulp-plumber");
 const browserSync = require("browser-sync");
 const server = browserSync.create();
 
@@ -42,6 +43,7 @@ function getData(file) {
 
 function nunjucks(done) {
   gulp.src("./src/templates/*")
+    .pipe(plumber())
     .pipe(data(getData('./src/data/global.json')))
     .pipe(
       nunjucksRender({
@@ -54,6 +56,7 @@ function nunjucks(done) {
 
 function style(done) {
   gulp.src(paths.styles.src)
+    .pipe(plumber())
     .pipe(sass())
     .pipe(prefix())
     .pipe(gulp.dest(paths.styles.dest));
