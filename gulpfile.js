@@ -7,6 +7,7 @@ const prettier = require("gulp-prettier");
 const plumber = require("gulp-plumber");
 const browserSync = require("browser-sync");
 const server = browserSync.create();
+const fs = require('fs');
 
 
 const paths = {
@@ -38,7 +39,7 @@ function serve(done) {
 }
 
 function getData(file) {
-  return require(file);
+  return JSON.parse(fs.readFileSync(file));
 }
 
 function nunjucks(done) {
