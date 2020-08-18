@@ -1,69 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    
+      <base href="https//go.pardot.com">
+    
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="%%description%%"/>
+    <title>%%title%%</title>
 
-<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
 
-  <base href="https//go.pardot.com">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"/>
+    
+      <!-- Form Styles - CI -->
+      <link rel="stylesheet" href="https://go.pardot.com/l/33192/2020-07-17/8vwvqp/33192/259976/form_styles_ci.css"/>
+    
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="%%description%%" />
-  <title>%%title%%</title>
+  </head>
+  <body>
+    
+      %%content%%
+    
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- jQuery, Popper, Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
-
-  <!-- Form Styles - CI -->
-  <link rel="stylesheet" href="https://go.pardot.com/l/33192/2020-07-17/8vwvqp/33192/259976/form_styles_ci.css" />
-
-
-</head>
-
-<body>
-
-  %%content%%
-
-
-  <!-- jQuery, Popper, Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
-
-
-  <!-- Add Bootstrap Classes to Form Fields -->
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("p.form-field").each(function () {
-        var classes = $(this).attr("class");
-        if (classes.indexOf("col-") <= 0) {
-          $(this).addClass("col-12");
-        }
-      });
-    });
-  </script>
-
-
-  <!-- Add Margin To Submit Button if reCaptcha is Displayed -->
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if ($(".pd-captcha").length) {
-        $("#pardot-form p.submit input").css("margin-top", "80px");
+    
+    
+      <!-- Add Bootstrap Classes to Form Fields -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("p.form-field").each(function () {
+      var classes = $(this).attr("class");
+      if (classes.indexOf("col-") <= 0) {
+        $(this).addClass("col-12");
       }
     });
-  </script>
+  });
+</script>
 
-</body>
+    
+    <!-- Add Margin To Submit Button if reCaptcha is Displayed -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    if ($(".pd-captcha").length) {
+      $("#pardot-form p.submit input").css("margin-top", "80px");
+    }
+  });
+</script>
 
+  </body>
 </html>

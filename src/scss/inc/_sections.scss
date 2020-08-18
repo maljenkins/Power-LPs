@@ -1,5 +1,5 @@
 // Defaults
-section, header, footer {
+section {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -69,6 +69,7 @@ header {
   #hero {
     color: color(white);
     text-align: center;
+    
   }
   // Form In Header
   &.form-header {
@@ -160,7 +161,7 @@ footer {
 #copyright {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  background-color: $third-color;
+  background-color: color(dark-blue);
   color: transparentize(color(white), 0.2);
 }
 

@@ -225,6 +225,7 @@ $required-asterisk: $error-color;
     }
   }
   .g-recaptcha > div {
+    /* Google ReCaptcha Styles */
     // Float the reCaptcha to the Right with an 8px offset to match input spacing
       // margin-left: auto;
       // margin-right: 8px;
@@ -267,18 +268,18 @@ $required-asterisk: $error-color;
         @include submitStyles;
       }
     }
-    /* Style Default Text Added Above/Below Form */
     &:not([class]) {
+      /* Style Default Text Added Above/Below Form */
       @include aboveBelow;
     }
-    /* Required Field Label Styles */
+   
     &.required {
       label:not(.inline) {
+        /* Required Field Label Styles */
         @include requiredStyles();
       }
     }
   }
-  /* Google ReCaptcha Styles */
      @include recaptchaStyles();
 }
 

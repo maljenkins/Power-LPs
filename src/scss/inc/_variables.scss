@@ -26,9 +26,10 @@ $font-stack: (
 
 @each $key, $value in $font-stack {
   .#{$key} {
-    font-family: $value;
+    font-family: $value !important;
   }
 }
+
 
 $primary-font: font-stack(open-sans);
 $headline-font: font-stack(lato);
@@ -48,7 +49,7 @@ $font-weight: (
 
 @each $key, $value in $font-weight {
   .font-#{$key} {
-    font-weight: $value;
+    font-weight: $value !important;
   }
 }
 
@@ -64,29 +65,51 @@ $color: (
   dark-blue: #051c31,
 );
 
+
 // Accessor Function of map-get $color
 
 @function color($key) {
   @return map-get($color, $key);
 }
 
+$primary-color: color(orange);
+$secondary-color: color(blue);
+
+.text-primary {
+  color: $primary-color !important;
+}
+.bg-primary {
+  background-color: $primary-color !important;
+}
+.border-primary {
+  border-color: $primary-color !important;
+}
+
+.text-secondary {
+  color: $secondary-color !important;
+}
+.bg-secondary {
+  background-color: $secondary-color !important;
+}
+.border-secondary {
+  border-color: $secondary-color !important;
+}
+
 // Generate Text, Background, and Border Color Classes for Each Color (ex: class="bg-orange")
 
 @each $key, $value in $color {
   .text-#{$key} {
-    color: $value;
+    color: $value !important;
   }
   .bg-#{$key} {
-    background-color: $value;
+    background-color: $value !important;
   }
   .border-#{$key} {
     border-color: $value !important;
   }
 }
 
-$primary-color: color(orange);
-$secondary-color: color(blue);
-$third-color: color(dark-blue);
+
 
 // Border Radius
 
