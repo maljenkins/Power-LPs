@@ -268,6 +268,7 @@
         </h4>
         <div pardot-region="Footer 1 - Content">
           <p>
+            Cheshire Impact<br/>
             1 Tara Blvd Suite 200<br/>
             Nashua, NH 03062
           </p>
@@ -354,15 +355,16 @@
       <!-- Add Bootstrap Classes to Form Fields -->
 <script type="text/javascript">
   $(document).ready(function () {
-    $("p.form-field").each(function () {
-      var classes = $(this).attr("class");
-      if (classes.indexOf("col-") <= 0) {
-        $(this).addClass("col-12");
-      }
-    });
+    $("p.form-field")
+      .not(".hidden")
+      .each(function () {
+        var classes = $(this).attr("class");
+        if (classes.indexOf("col-") <= 0) {
+          $(this).addClass("col-12");
+        }
+      });
   });
 </script>
-
     
     
       <!-- Dynamic Offset for Fixed Nav -->
