@@ -3,7 +3,6 @@ const nunjucksRender = require("gulp-nunjucks-render");
 const sass = require("gulp-sass");
 const prefix = require('gulp-autoprefixer');
 const data = require("gulp-data");
-const prettier = require("gulp-prettier");
 const plumber = require("gulp-plumber");
 const browserSync = require("browser-sync");
 const server = browserSync.create();
@@ -64,12 +63,6 @@ function style(done) {
   done();
 }
 
-// function pretty(done) {
-//   gulp.src("./dist/*.html")
-//     .pipe(prettier({ singleQuote: true }))
-//     .pipe(gulp.dest("./dist/"));
-//   done();
-// }
 
 
 const watch = () => gulp.watch([paths.styles.src, paths.html.src, paths.data.src], gulp.series(nunjucks, style, reload));
