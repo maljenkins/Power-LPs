@@ -232,6 +232,10 @@ $required-asterisk: $error-color;
   }
 }
 
+body, html {
+  background-color: transparent !important;
+}
+
 #pardot-form {
   @include formStyles;
   p {
